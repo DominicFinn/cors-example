@@ -40,7 +40,7 @@
         <p id="error" class="error message"></p>
         <script>
             window.addEventListener('load', () => {
-                const perkIds = fetch('http://localhost:5000/')
+                fetch('http://localhost:5000/')
                     .then(res => res.json())
                     .then(data => {
                         const perks = document.getElementById('perks')
