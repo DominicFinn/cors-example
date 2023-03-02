@@ -1,12 +1,18 @@
 # mucking about
 
-# Server is running on flask.
+## Dependencies
+
+Server is running on flask.
 
 ```sh
+cd server
 pip install -r requirements.txt
+cd ..
 ```
 
-# To run the server
+## Server
+
+To run the server
 
 ```sh
 npm run server
@@ -17,9 +23,7 @@ Should start on port 5000
 Give it a wink and a nudge:
 
 ```sh
-
 curl -X POST -H "Content-Type: application/json" -d '' http://localhost:5000/
-
 ```
 
 and you will get back
@@ -32,7 +36,7 @@ and you will get back
 
 Well done you.
 
-# Client
+## Client
 
 Just a single page.
 
@@ -42,7 +46,7 @@ to run the client
 npm run client
 ```
 
-# Run the whole lot
+## Run the whole lot
 
 ```sh
 npm run start
