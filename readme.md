@@ -49,3 +49,11 @@ npm run start
 ```
 
 This uses a library called concurrently to run both the server and the client at the same time. It's fab.
+
+## Show CORS working / not working
+
+Remove / comment out the cors header being sent back to the client in `server.py`:
+
+    ```python
+        #response.headers.add('Access-Control-Allow-Origin', '*')
+    ```

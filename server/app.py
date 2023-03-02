@@ -11,7 +11,7 @@ def home(): # route handler function
     perkIds = perks.perkIds()
     
     response = jsonify({'perks': perkIds})
-    response.headers.add('Access-Control-Allow-Origin', '*')
+    #response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 
