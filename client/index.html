@@ -18,14 +18,17 @@
             color: chartreuse;
         }
 
+        .message {
+            display: block;
+            padding: 20px;
+        }
+
         .perks {
             color: green;
-            padding: 20px;
         }
 
         .error {
             color: red;
-            padding: 20px;
         }
     </style>
 </head>
@@ -33,8 +36,8 @@
 <body>
     <div class="container">
         <p>hello</p>
-        <p id="perks"></p>
-        <p id="error"></p>
+        <p id="perks message"></p>
+        <p id="error message"></p>
         <script>
             window.addEventListener('load', () => {
                 const perkIds = fetch('http://localhost:5000/')
