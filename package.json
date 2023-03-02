@@ -1,0 +1,24 @@
+{
+  "name": "cors-example",
+  "version": "1.0.0",
+  "description": "```sh\r pip install -r requirements.txt\r ```",
+  "main": "index.js",
+  "scripts": {
+    "client": "py -m http.server -d client/",
+    "server": "py server/app.py",
+    "start": "concurrently \"npm run client\" \"npm run server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DominicFinn/cors-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DominicFinn/cors-example/issues"
+  },
+  "homepage": "https://github.com/DominicFinn/cors-example#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}

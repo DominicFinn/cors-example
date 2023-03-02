@@ -1,26 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-<style>
-    .container {
-        width: 100%;
-        height: 100vh;
-        background-color: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: chartreuse;
-    }
-</style>
+    <style>
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: chartreuse;
+        }
+
+        .perks {
+            color: green;
+            padding: 20px;
+        }
+
+        .error {
+            color: red;
+            padding: 20px;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
         <p>hello</p>
+        <p id="perks"></p>
+        <p id="error"></p>
+        <script>
+            window.addEventListener('load', () => {
+                const perkIds = fetch('http://localhost:5000/')
+                    .then(res => res.json())
+                    .then(data => {
+                        const perks = document.getElementById('perks')
+                        perks.innerHTML = data.perks.join(', ');
+                    }).catch(err => {
+                        console.log(err);
+
+                        const error = document.getElementById('error')
+                        error.innerHTML = err;
+                    });
+            });
+        </script>
     </div>
 </body>
+
 </html>
